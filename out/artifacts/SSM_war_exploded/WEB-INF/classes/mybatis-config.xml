@@ -5,6 +5,13 @@
 <!--以下标签严格按照顺序放置，否则会报错-->
 <configuration>
 
+    <!--二：配置设置-->
+    <settings>
+        <!--使用默认日志-->
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+
+
 
     <!--三：类型别名 定义好别名后直接在文件中使用别名即可 注意不区分大小写-->
     <typeAliases>
