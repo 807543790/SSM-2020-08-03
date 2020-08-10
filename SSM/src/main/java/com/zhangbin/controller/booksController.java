@@ -23,10 +23,24 @@ public class booksController {
     @Qualifier("BookServiceImpl")
     private BookSrevice bookSrevice;
 
+
+    //查询所有书籍
     @RequestMapping("/AllBook")
     public String allBook(Model model){
         List<Books> books = bookSrevice.selectAllBook();
         model.addAttribute("list",books);
         return "allBook";
+    }
+
+    //跳转添加书籍页面
+    @RequestMapping("/addBook")
+    public String addBook(){
+        return "addBook";
+    }
+
+    @RequestMapping("/addEntity")
+    public String addEntity(Books books){
+        bookSrevice.addBook(books);
+        return "redirect:/book/AllBook";
     }
 }

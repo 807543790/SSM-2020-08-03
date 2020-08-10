@@ -11,6 +11,6 @@
     <title>$Title$</title>
   </head>
   <body>
-    <a href="${pageContext.request.contextPath}/book/AllBook">跳转</a>
+    <a href="/book/AllBook">跳转</a>
   </body>
 </html>
