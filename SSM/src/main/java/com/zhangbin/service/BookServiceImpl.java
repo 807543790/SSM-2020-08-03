@@ -39,4 +39,8 @@ public class BookServiceImpl implements BookSrevice {
     public List<Books> selectAllBook() {
         return bookMapper.selectAllBook();
     }
+
+    public List<Books> likeSelectBook(String bookName) {
+        return bookMapper.likeSelectBook(bookName);
+    }
 }

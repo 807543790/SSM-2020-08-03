@@ -15,10 +15,11 @@
                         <small>书籍列表-显示书籍:</small>
                     </h1>
                 </div>
-                <div class="row">
-                    <div class="col-md-12 column">
-                        <a class="btn btn-success" href="/book/addBook">添加书籍</a>
-                    </div>
+                <div class="col-md-3 column" style="float: right;">
+                    <form method="post" action="/book/likeBook">
+                        <input type="text" placeholder="请输入查询的书籍" name="bookName">
+                        <input type="submit" value="查询" class="btn btn-success">
+                    </form>
                 </div>
             </div>
         </div>
@@ -52,6 +53,12 @@
             </table>
         </div>
     </div>
+
+    <div class="row">
+        <div class="col-md-6 column">
+            <a class="btn btn-success" href="/book/addBook">添加书籍</a>
+        </div>
     </div>
+</div>
 </body>
 </html>

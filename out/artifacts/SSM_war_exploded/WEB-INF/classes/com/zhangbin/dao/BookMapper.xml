@@ -28,4 +28,9 @@
     <select id="selectAllBook" resultType="books">
         select * from ssmbuild.books
     </select>
+
+    <!--模糊查询-->
+    <select id="likeSelectBook" resultType="Books">
+        select * from ssmbuild.books where bookName like "%" #{bookName} "%"
+    </select>
 </mapper>

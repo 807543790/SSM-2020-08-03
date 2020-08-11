@@ -21,5 +21,7 @@ public interface BookMapper {
     Books selectBook(@Param("bookID") int id);
 //    全部查询
     List<Books> selectAllBook();
+//    模糊查询
+    List<Books> likeSelectBook(@Param("bookName") String bookName);
 }
 

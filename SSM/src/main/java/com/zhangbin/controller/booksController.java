@@ -68,4 +68,16 @@ public class booksController {
         bookSrevice.deleteBook(id);
         return "redirect:/book/AllBook";//添加完毕重定向到书籍展示页面
     }
+
+    //查询书籍
+    @RequestMapping("/likeBook")
+    public String likeBook(String bookName,Model model){
+        System.out.println(bookName);
+        if (bookName != null){
+            List<Books> books = bookSrevice.likeSelectBook(bookName);
+            model.addAttribute("list",books);
+            return "allBook";
+        }
+        return "redirect:/book/AllBook";//添加完毕重定向到书籍展示页面
+    }
 }
